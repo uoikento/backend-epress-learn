@@ -2,14 +2,33 @@ POST http://localhost:3001/api/notes
 content-Type: application/json
 
 {
-    "content": "hello",
-    "important": true
+    "content": "goobye user",
+    "important": true,
+    "userId": "602d19bb03c4989f1f88cbeb"
   }
 ###
-POST http://localhost:3001/api/notes
+POST http://localhost:3001/api/users
 content-Type: application/json
 
 {
-    "content": "hello",
-    "important": true
+    "username": "hoo",
+    "name": "superuse",
+    "password": "kokomomo"
   }
+###
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+  "username": "hoo",
+  "password": "kokomomo"
+}
+###
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhvbyIsImlkIjoiNjAyZTE4N2RmNjg0MmJkNGU3ZDlkMTE2IiwiaWF0IjoxNjEzNjMzNjY1fQ.pCeKrk21IbVoVN0l8NVLq07H5w6al8sZvx-RAAGjg_M 
+
+{
+  "content": "token go",
+  "important": true
+}
